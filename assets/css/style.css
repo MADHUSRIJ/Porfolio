@@ -4,17 +4,12 @@ body{
     flex-direction: row;
     margin: 0;
 }
-.main-right{
-    width: 50%;
-    height: 100vh;
+.main-left{
+    width: 40%;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     background: linear-gradient(to right,rgba(35, 177, 202, 0.650) 0%,rgba(35, 177, 202, 0.650) 50%,white 50%,white 50%);
-}
-.main-left{
-    width: 50%;
-    height: 100vh;
 }
 
 .content{
@@ -29,7 +24,17 @@ body{
     height: 60vh;
     width: 50vh;
     background-color: rgb(174, 240, 252);
-    box-shadow: 0px 5px 5px 0px rgba(192, 192, 192, 0.39);
+    box-shadow: 0px 50px 50px 0px rgba(192, 192, 192, 0.39);
+    animation: come-in 5s forwards;
+}
+
+@keyframes come-in {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(20%);
+    }
 }
 
 #profile-pic{
@@ -54,7 +59,6 @@ body{
     text-transform: uppercase;
 }
 
-
 .contact{
     height: 10%;
     padding: 10px 50px 10px 50px;
@@ -67,4 +71,90 @@ body{
 .fa{
     color: rgb(1, 71, 84);
     font-size: 24px;
+}
+
+.main-right{
+    width: 60%;
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.btn{
+    display: flex;
+    width: 50vh;
+    justify-content: space-between;
+}
+
+.btn .buttons{
+    border: 0px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(16, 108, 125);
+    cursor: pointer;
+}
+
+.active-button{
+    background-color:  rgba(174, 240, 252, 0.237);
+}
+
+.sub-content{
+    display: flex;
+    height: 40vh;
+    justify-content: space-between;
+}
+
+.basic-details{
+    margin: 20px 0px 20px 0px;
+}
+
+.box{
+    width: 48%;
+    border: 2px solid black;
+}
+
+.intro{
+    text-align: justify;
+    line-height: 25px;
+}
+
+.study{
+    font-size: 14px;
+    width: 60%;
+    margin: 40px 0px 40px 0px;
+}
+
+.degree, .school, .details p{
+    margin: 8px;
+}
+
+.perc{
+    color: rgb(16, 108, 125);
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.property{
+    display: inline-flex; 
+    align-items: center;
+    width: 30%;
+}
+
+.hidden{
+    display: none;
+}
+
+.property .fa{
+    color: rgba(19, 31, 33, 0.845);
+    font-size: 24px;
+}
+
+.value{
+    margin-left: 10px;
 }
